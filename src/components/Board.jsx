@@ -1,12 +1,12 @@
 import React from "react";
 import Square from '../components/Square';
 
-const board = (props) => {
+const Board = ({ onClick, squares }) => {
   const renderSquare = (i) => {
     return (
       <Square
-        value={props.squares[i]}
-        onClick={() => props.onClick(i)}
+        value={squares[i]}
+        onClick={() => onClick(i)}
       />
     );
   };
@@ -32,4 +32,4 @@ const board = (props) => {
   );
 }
 
-export default board;
+export default Board;
